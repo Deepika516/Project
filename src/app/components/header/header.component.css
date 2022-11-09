@@ -1,0 +1,8 @@
+.nav-item{
+    transition-duration: 0.4s;
+}
+
+.nav-link:hover {
+    background-color: #939993; /* Green */
+    color: white;
+  }

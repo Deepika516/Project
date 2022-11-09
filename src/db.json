@@ -1,0 +1,112 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Users": [
+    {
+      "first_name": "Dennial",
+      "last_name": "Miller",
+      "email": "Deny01@gmail.com",
+      "password": "deny01234",
+      "id": 1
+    },
+    {
+      "first_name": "jenny",
+      "last_name": "Doe",
+      "email": "jenny@gmail.com",
+      "password": "jenny1234",
+      "id": 2
+    },
+    {
+      "first_name": "deepika",
+      "last_name": "mahindroo",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "password": "password123",
+      "id": 3
+    },
+    {
+      "first_name": "aashish",
+      "last_name": "aggerwal",
+      "email": "aashish1592@gmail.com",
+      "password": "aashu1234",
+      "id": 4
+    }
+  ],
+  "appointment": [
+    {
+      "name": "Deepika Mahindroo",
+      "gender": "FEMALE",
+      "dob": "2022-11-11",
+      "category": "hr",
+      "doa": "2022-11-04T14:00",
+      "id": 1
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "dob": "2022-11-05",
+      "category": "hr",
+      "doa": "2022-11-04T14:00",
+      "id": 2
+    },
+    {
+      "name": "tiny",
+      "gender": "FEMALE",
+      "dob": "2022-11-03",
+      "category": "hr",
+      "doa": "2022-11-01T15:00",
+      "id": 3
+    },
+    {
+      "name": "jenny",
+      "gender": "FEMALE",
+      "dob": "2022-11-11",
+      "dept": "Cardiology",
+      "doa": "2022-11-03T15:00",
+      "id": 4
+    }
+  ],
+  "department":[
+    {
+      "dept_name":"Cardiology",
+      "id":101
+    },
+    {
+      "dept_name":"Radiology",
+      "id":101
+    }
+ ],
+ "doctors":[
+  {
+    "dr_name":"Dr.Rizwan",
+    "id":101
+  },
+  {
+    "dr_name":"Dr.Haris",
+    "id":101
+  },
+  {
+    "dr_name":"Dr.Volt",
+    "id":102
+  },
+  {
+    "dr_name":"Dr.Jenny",
+    "id":102
+  }
+
+ ]
+}
