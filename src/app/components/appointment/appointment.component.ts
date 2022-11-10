@@ -22,6 +22,7 @@ export class AppointmentComponent implements OnInit {
       gender:[""],
       dob:[""],
       dept:[""],
+      doc:[""],
       doa:[""]
     })
   }
@@ -35,20 +36,14 @@ export class AppointmentComponent implements OnInit {
     const user_gen=this.appointmentForm.value.gender;
     const user_dob=this.appointmentForm.value.dob;
     const user_dept=this.appointmentForm.value.dept;
+    const user_doc=this.appointmentForm.value.doc;
     const user_doa=this.appointmentForm.value.doa;
-    this.userServive.onAppointment(user_name,user_gen,user_dob,user_dept,user_doa).subscribe((respond:IAppointment[])=>
+    this.userServive.onAppointment(user_name,user_gen,user_dob,user_dept,user_doc,user_doa).subscribe((respond:IAppointment[])=>
     {
       console.log(respond);
       alert("Booking Successful");
     })
   }
-}
-onShowAppointment(){
-  debugger
-  this.userServive.showData().subscribe((respData:IAppointment[])=>
-  {
-    console.log(respData);
-  })
 }
 
 }

@@ -11,23 +11,25 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
-  onAppointment(u_name:string,
-    u_gender:string,
-    u_dob:Date,
-    u_dept:string,
-    u_doa:string):Observable<IAppointment[]>{
+  onAppointment(u_name:string,u_gender:string,u_dob:Date,u_dept:string,u_doc:string,u_doa:string
+    ):Observable<IAppointment[]>{
     return this.http.post<IAppointment[]>("http://localhost:3000/appointment",{
         name:u_name,
         gender:u_gender,
         dob:u_dob,
         dept:u_dept,
+        doc:u_doc,
         doa:u_doa
     })
   }
 
-  showData():Observable<IAppointment[]>{
-    return this.http.get<IAppointment[]>("http://localhost:3000/appointment");
+  getData():Observable<IAppointment[]>{
+    return this.http.get<IAppointment[]>("http://localhost:3000/appointment")
   }
+
+  // getDataById(id: number):Observable<IAppointment[]>{
+  //   // return this.http.get<IAppointment[]>(`http://localhost:3000/appointment/${id}`);
+  // }
 
   showDept():Observable<IDept>{
     return this.http.get<IDept>("http://localhost:3000/dept")

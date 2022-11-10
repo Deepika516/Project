@@ -51,7 +51,8 @@
       "name": "Deepika Mahindroo",
       "gender": "FEMALE",
       "dob": "2022-11-11",
-      "category": "hr",
+      "dept":"Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
       "id": 1
     },
@@ -59,7 +60,8 @@
       "name": "John",
       "gender": "MALE",
       "dob": "2022-11-05",
-      "category": "hr",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
       "id": 2
     },
@@ -67,7 +69,8 @@
       "name": "tiny",
       "gender": "FEMALE",
       "dob": "2022-11-03",
-      "category": "hr",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-01T15:00",
       "id": 3
     },
@@ -76,37 +79,46 @@
       "gender": "FEMALE",
       "dob": "2022-11-11",
       "dept": "Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-03T15:00",
       "id": 4
-    }
-  ],
-  "department":[
-    {
-      "dept_name":"Cardiology",
-      "id":101
     },
     {
-      "dept_name":"Radiology",
-      "id":101
+      "name": "Aashu",
+      "gender": "MALE",
+      "dob": "2022-09-15",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-01T10:00",
+      "id": 5
     }
- ],
- "doctors":[
-  {
-    "dr_name":"Dr.Rizwan",
-    "id":101
-  },
-  {
-    "dr_name":"Dr.Haris",
-    "id":101
-  },
-  {
-    "dr_name":"Dr.Volt",
-    "id":102
-  },
-  {
-    "dr_name":"Dr.Jenny",
-    "id":102
-  }
-
- ]
+  ],
+  "department": [
+    {
+      "dept_name": "Cardiology",
+      "id": 101
+    },
+    {
+      "dept_name": "Radiology",
+      "id": 101
+    }
+  ],
+  "doctors": [
+    {
+      "dr_name": "Dr.Rizwan",
+      "id": 101
+    },
+    {
+      "dr_name": "Dr.Haris",
+      "id": 101
+    },
+    {
+      "dr_name": "Dr.Volt",
+      "id": 102
+    },
+    {
+      "dr_name": "Dr.Jenny",
+      "id": 102
+    }
+  ]
 }
