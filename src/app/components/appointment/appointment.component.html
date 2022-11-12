@@ -45,8 +45,8 @@
                         <div class="form-outline flex-fill mb-0">
                             <label for="dept" class="form-label">Department:</label><br>
                              <select name="dept" class="form-control" id="dept" formControlName="dept" ngModel name="dept">
-                              <option value="Cardiology">Cardiology</option>
-                              <option value="Radiology">Radiology</option>
+                              <option *ngFor = "let dept of department">{{dept.dept_name}}</option>
+                              
                             </select>
                           </div>
                         </div>

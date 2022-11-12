@@ -32,6 +32,6 @@ export class UserService {
   // }
 
   showDept():Observable<IDept>{
-    return this.http.get<IDept>("http://localhost:3000/dept")
+    return this.http.get<IDept>("http://localhost:3000/department")
   }
 }

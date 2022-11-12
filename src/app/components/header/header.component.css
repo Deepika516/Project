@@ -1,8 +1,20 @@
-.nav-item{
+.nav-item {
     transition-duration: 0.4s;
 }
 
-.nav-link:hover {
-    background-color: #939993; /* Green */
-    color: white;
-  }
+.navbar-light .nav-item .nav-link:hover {
+    color: #0d6efd;
+}
+
+@media(min-width:768px) {
+    .login-signup:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 45%;
+        width: 1px;
+        top: 50%;
+        background-color: #ccc;
+        transform: translateY(-50%);
+    }
+}

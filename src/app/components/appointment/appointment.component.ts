@@ -15,7 +15,9 @@ export class AppointmentComponent implements OnInit {
   constructor(private userServive:UserService,private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
-    this.department=this.userServive.showDept();
+    this.userServive.showDept().subscribe((respData:IDept)=>{
+      this.department=respData;
+    });
     console.log(this.department);
     this.appointmentForm=this.formBuilder.group({
       name:[""],

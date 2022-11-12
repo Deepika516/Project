@@ -38,8 +38,6 @@ export class CheckAppoitmentComponent implements OnInit {
 onGridReady(params: GridReadyEvent){
   this.userService.getData().subscribe((respData)=>
   {
-    debugger
-    console.log(respData)
     this.rowData=respData;
   })
 }
