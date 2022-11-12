@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
 
   onSubmit(form:NgForm){
     
-    //const id="";
+   
     const firstname=form.value.first_name;
     const lastname=form.value.last_name;
     const email=form.value.email;
@@ -33,7 +33,6 @@ export class SignupComponent implements OnInit {
     
     this.authService.onSignup(firstname,lastname,email,password).subscribe((resp:IUser[])=>
     {
-    console.log(resp);
     alert('SIGNIN SUCCESFUL');
     this.router.navigate(["login"])
     }
