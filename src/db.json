@@ -51,7 +51,8 @@
       "name": "Deepika Mahindroo",
       "gender": "FEMALE",
       "dob": "2022-11-11",
-      "dept":"Cardiology",
+      "email":  "deepika.mahindroo@sourcefuse.com",
+      "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
       "id": 1
@@ -60,6 +61,7 @@
       "name": "John",
       "gender": "MALE",
       "dob": "2022-11-05",
+      "email":  "johndoe@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
@@ -69,6 +71,7 @@
       "name": "tiny",
       "gender": "FEMALE",
       "dob": "2022-11-03",
+      "email":  "tiny0424@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-01T15:00",
@@ -78,6 +81,7 @@
       "name": "jenny",
       "gender": "FEMALE",
       "dob": "2022-11-11",
+      "email":  "jenny@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-03T15:00",
@@ -87,38 +91,83 @@
       "name": "Aashu",
       "gender": "MALE",
       "dob": "2022-09-15",
+      "email":  "aashish1592@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-01T10:00",
       "id": 5
+    },
+    {
+      "name": "Deepika Mahindroo",
+      "gender": "FEMALE",
+      "email":  "deepika.mahindroo@sourcefuse.com",
+      "dob": "2022-11-09",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-18T14:50",
+      "id": 6
+    },
+    {
+      "name": "Deepika Mahindroo",
+      "gender": "FEMALE",
+      "email":"deepika.mahindroo@sourcefuse.com",
+      "dob": "2022-11-04" ,
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-04T13:40",
+      "id": 7
+    },
+    {
+      "name": "Deepika Mahindroo",
+      "gender": "FEMALE",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "dob": "2022-11-11",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-19T13:50",
+      "id": 8
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "johndoe@gmail.com",
+      "dob": "2022-11-24",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-25T14:00",
+      "id": 9
     }
   ],
   "department": [
     {
       "dept_name": "Cardiology",
-      "id": 101
+      "dept_id": 101
     },
     {
       "dept_name": "Radiology",
-      "id": 102
+      "dept_id": 102
     }
   ],
   "doctors": [
     {
-      "dr_name": "Dr.Rizwan",
-      "id": 101
+      "doc_id": 1001,
+      "dept_id": 101,
+      "doc_name": "Ms.Jenny"
     },
     {
-      "dr_name": "Dr.Haris",
-      "id": 101
+      "doc_id": 1002,
+      "dept_id": 101,
+      "doc_name": "Ms.Tiny"
     },
     {
-      "dr_name": "Dr.Volt",
-      "id": 102
+      "doc_id": 1003,
+      "dept_id": 102,
+      "doc_name": "Mr.John"
     },
     {
-      "dr_name": "Dr.Jenny",
-      "id": 102
+      "doc_id": 1004,
+      "dept_id": 102,
+      "doc_name": "Ms.Shine"
     }
   ]
 }

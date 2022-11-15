@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { disableDebugTools } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
-import { IDept } from '../interfaces/dept.interface';
+import { IDept, IDoc } from '../interfaces/dept.interface';
 import { IAppointment } from '../interfaces/userAppointment.interface';
 
 @Injectable({
@@ -10,12 +11,21 @@ import { IAppointment } from '../interfaces/userAppointment.interface';
 export class UserService {
 
   constructor(private http:HttpClient) { }
-
-  onAppointment(u_name:string,u_gender:string,u_dob:Date,u_dept:string,u_doc:string,u_doa:string
+  onAppointment(u_name:string,
+    u_gender:string,
+    u_email:string,
+    u_dob:Date,
+    u_dept:string,
+    u_doc:string,
+    u_doa:string,
     ):Observable<IAppointment[]>{
-    return this.http.post<IAppointment[]>("http://localhost:3000/appointment",{
+      debugger
+    return this.http.post<IAppointment[]>("http://localhost:3000/appointment",
+    {
         name:u_name,
         gender:u_gender,
+        email:u_email,
+        
         dob:u_dob,
         dept:u_dept,
         doc:u_doc,
@@ -31,7 +41,15 @@ export class UserService {
   //   // return this.http.get<IAppointment[]>(`http://localhost:3000/appointment/${id}`);
   // }
 
-  showDept():Observable<IDept>{
-    return this.http.get<IDept>("http://localhost:3000/department")
+  showDept():Observable<IDept[]>{
+    return this.http.get<IDept[]>("http://localhost:3000/department");
+  }
+
+  showDoc():Observable<IDoc[]>{
+    return this.http.get<IDoc[]>("http://localhost:3000/doctors");
+  }
+
+  removeData(id:number):Observable<IAppointment>{
+      return this.http.delete<IAppointment>("http://localhost:3000/employees/"+id)
   }
 }
