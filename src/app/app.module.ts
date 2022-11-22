@@ -4,7 +4,7 @@ import{FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { CheckAppoitmentComponent } from './components/check-appoitment/check-appoitment.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +27,8 @@ import { CheckAppoitmentComponent } from './components/check-appoitment/check-ap
     HeaderComponent,
     HomeComponent,
     AppointmentComponent,
-    CheckAppoitmentComponent,
-    
+    CheckAppoitmentComponent
+   
   ],
   imports: [
     BrowserModule,

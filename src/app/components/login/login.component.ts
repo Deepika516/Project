@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IUser } from 'src/app/interfaces/user.interface';
 import { AuthService } from 'src/app/services/auth.service';
+import { AuthorizationService } from 'src/app/services/authorization.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   public loginform!:FormGroup
-  constructor(private authService:AuthService,private formBuilder:FormBuilder,private router:Router) { }
+  constructor(private authService:AuthService,private formBuilder:FormBuilder,private authorizationService:AuthorizationService,private router:Router) { }
 
   ngOnInit(): void {
     this.loginform=this.formBuilder.group({
@@ -26,22 +27,24 @@ export class LoginComponent implements OnInit {
       if (this.loginform.invalid) {
         return;
     }
-    const email_value=this.loginform.value.email;
-    const password_value=this.loginform.value.password;
+    
     this.authService.login().subscribe((respData:IUser[])=>
     {
+     const email_value=this.loginform.value.email;
+     const password_value=this.loginform.value.password;
+     localStorage.setItem("currentUser",email_value)
         const check_user=respData.find((u:IUser)=>{
           return u.email===email_value && u.password===password_value
         })
         if(check_user)
         {
           alert("Login Successfull");
-          this.router.navigate(["home"]);
+          this.router.navigate(["/"]);
         }
         else
         alert("User Not Found");
-    }
-    )
+    })
   }
-}
+  }
+
 }

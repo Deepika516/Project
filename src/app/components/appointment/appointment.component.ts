@@ -15,23 +15,13 @@ export class AppointmentComponent implements OnInit {
   public appointmentForm !: FormGroup
   department:IDept[]=[];
   doctors:IDoc[]=[];
-  selectedDept: String=""
-  
-
+  selectedDept = 0;
+  selectedDocs = 0;
   constructor(private userServive:UserService,private formBuilder:FormBuilder) { }
 
+   
   ngOnInit(): void {
-    this.userServive.showDept().subscribe((respData:IDept[])=>{
-      this.department=respData;
-    });
-    this.userServive.showDoc().subscribe((docData:IDoc[])=>
-    {
-      // const check_doc=docData.find((u:IDept)=>{
-      // return})
-      // this.doctors=this.department.find((dept:IDept)=>dept.dept_name==this.appointmentForm.value.dept_name)
-      
-    })
-    console.log(this.department);
+    this.getDeptDocData();
     this.appointmentForm=this.formBuilder.group({
       name:[""],
       dob:[""],
@@ -49,27 +39,29 @@ export class AppointmentComponent implements OnInit {
         return;
     }
     const user_name=this.appointmentForm.value.name;
-
     const user_gen=this.appointmentForm.value.gender;
-
     const user_dob=this.appointmentForm.value.dob;
-
     const user_email=this.appointmentForm.value.email;
-
     const user_dept=this.appointmentForm.value.dept;
-
     const user_doc=this.appointmentForm.value.doc;
-
     const user_doa=this.appointmentForm.value.doa;
     this.userServive.onAppointment(user_name,user_gen,user_email,user_dob,user_dept,user_doc,user_doa).subscribe((respond:IAppointment[])=>
     {
-      console.log(respond);
       alert("Booking Successful");
     })
   }
   }
 
-  
-
+  getDeptDocData()
+  {
+    this.userServive.showDept().subscribe((respData:IDept[])=>{
+    this.department=respData;
+    });
+    this.userServive.showDoc().subscribe((docData:IDoc[])=>
+    {
+      this.doctors=docData;
+    })
+   
+  }
 }
 

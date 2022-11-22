@@ -11,24 +11,30 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item active">
-                      <a class="nav-link px-md-3" routerLinkActive="active" href="/home">Home </a>
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                      true}">
+                      <a class="nav-link px-md-3"  routerLink="/">Home </a>
                     </li>
                     
-                    <li class="nav-item">
-                      <a class="nav-link px-md-3" href="/appointment">Book Appointment</a>
+                    <li class="nav-item" routerLinkActive="active">
+                      <a class="nav-link px-md-3"  routerLink="/appointment">Book Appointment</a>
                     </li>
             
-                    <li class="nav-item">
-                      <a class="nav-link px-md-3" href="/appointment-check">My Appointments</a>
+                    <li class="nav-item" routerLinkActive="active">
+                      <a class="nav-link px-md-3"  routerLink="/appointment-check">My Appointments</a>
                     </li>
-                    <li class="nav-item login-signup position-relative ps-md-2 ms-md-2">
-                        <a class="nav-link px-md-3" href="/login">Login</a>
+                    
+                    <li class="nav-item login-signup position-relative ps-md-2 ms-md-2" routerLinkActive="active">
+                        <a class="nav-link px-md-3" routerLink="/login">Login</a>
                       </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-md-3"  href="/signup">Signup</a>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link px-md-3" routerLink="/signup">Signup</a>
                     </li>
-                     
+
+                    <li class="nav-item" routerLinkActive="active">
+                      <button class="btn btn-primay" (click)="onLogout()">Logout</button>
+                  </li>
+                    
               </ul>
 
             </div>

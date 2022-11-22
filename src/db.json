@@ -44,6 +44,13 @@
       "email": "aashish1592@gmail.com",
       "password": "aashu1234",
       "id": 4
+    },
+    {
+      "first_name": "Pranav ",
+      "last_name": "Miglani",
+      "email": "pranav.miggi@gmail.com",
+      "password": "angrybird",
+      "id": 5
     }
   ],
   "appointment": [
@@ -51,7 +58,7 @@
       "name": "Deepika Mahindroo",
       "gender": "FEMALE",
       "dob": "2022-11-11",
-      "email":  "deepika.mahindroo@sourcefuse.com",
+      "email": "deepika.mahindroo@sourcefuse.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
@@ -61,7 +68,7 @@
       "name": "John",
       "gender": "MALE",
       "dob": "2022-11-05",
-      "email":  "johndoe@gmail.com",
+      "email": "johndoe@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
@@ -71,7 +78,7 @@
       "name": "tiny",
       "gender": "FEMALE",
       "dob": "2022-11-03",
-      "email":  "tiny0424@gmail.com",
+      "email": "tiny0424@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-01T15:00",
@@ -81,7 +88,7 @@
       "name": "jenny",
       "gender": "FEMALE",
       "dob": "2022-11-11",
-      "email":  "jenny@gmail.com",
+      "email": "jenny@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-03T15:00",
@@ -91,7 +98,7 @@
       "name": "Aashu",
       "gender": "MALE",
       "dob": "2022-09-15",
-      "email":  "aashish1592@gmail.com",
+      "email": "aashish1592@gmail.com",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-01T10:00",
@@ -100,7 +107,7 @@
     {
       "name": "Deepika Mahindroo",
       "gender": "FEMALE",
-      "email":  "deepika.mahindroo@sourcefuse.com",
+      "email": "deepika.mahindroo@sourcefuse.com",
       "dob": "2022-11-09",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
@@ -110,8 +117,8 @@
     {
       "name": "Deepika Mahindroo",
       "gender": "FEMALE",
-      "email":"deepika.mahindroo@sourcefuse.com",
-      "dob": "2022-11-04" ,
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "dob": "2022-11-04",
       "dept": "Cardiology",
       "doc": "Dr.Jenny",
       "doa": "2022-11-04T13:40",
@@ -136,38 +143,74 @@
       "doc": "Dr.Jenny",
       "doa": "2022-11-25T14:00",
       "id": 9
+    },
+    {
+      "name": "Pranav",
+      "gender": "MALE",
+      "email": "pranav.miggi@gmail.com",
+      "dob": "1993-07-24",
+      "dept": "4",
+      "doc": "Ms.Tiny",
+      "doa": "2022-11-26T17:00",
+      "id": 10
     }
   ],
   "department": [
     {
       "dept_name": "Cardiology",
-      "dept_id": 101
+      "id": 1
     },
     {
       "dept_name": "Radiology",
-      "dept_id": 102
+      "id": 2
+    },
+    {
+      "dept_name": "Oncology",
+      "id": 3
+    },
+    {
+      "dept_name": "Neurology",
+      "id": 4
+    },
+    {
+      "dept_name": "Urology",
+      "id": 5
+    },
+    {
+      "dept_name": "Psychology",
+      "id": 6
     }
   ],
   "doctors": [
     {
       "doc_id": 1001,
-      "dept_id": 101,
+      "dept_id": 1,
       "doc_name": "Ms.Jenny"
     },
     {
       "doc_id": 1002,
-      "dept_id": 101,
+      "dept_id": 2,
       "doc_name": "Ms.Tiny"
     },
     {
       "doc_id": 1003,
-      "dept_id": 102,
+      "dept_id": 3,
       "doc_name": "Mr.John"
     },
     {
       "doc_id": 1004,
-      "dept_id": 102,
+      "dept_id": 4,
       "doc_name": "Ms.Shine"
+    },
+    {
+      "doc_id": 1005,
+      "dept_id": 5,
+      "doc_name": "Ms.Aggerwal"
+    },
+    {
+      "doc_id": 1006,
+      "dept_id": 6,
+      "doc_name": "Ms.Daina"
     }
   ]
 }

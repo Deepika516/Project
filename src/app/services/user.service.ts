@@ -25,7 +25,6 @@ export class UserService {
         name:u_name,
         gender:u_gender,
         email:u_email,
-        
         dob:u_dob,
         dept:u_dept,
         doc:u_doc,
@@ -37,9 +36,9 @@ export class UserService {
     return this.http.get<IAppointment[]>("http://localhost:3000/appointment")
   }
 
-  // getDataById(id: number):Observable<IAppointment[]>{
-  //   // return this.http.get<IAppointment[]>(`http://localhost:3000/appointment/${id}`);
-  // }
+  getDataById(email:string):Observable<IAppointment[]>{
+    return this.http.get<IAppointment[]>(`http://localhost:3000/appointment/${email}`);
+  }
 
   showDept():Observable<IDept[]>{
     return this.http.get<IDept[]>("http://localhost:3000/department");

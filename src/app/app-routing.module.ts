@@ -6,14 +6,17 @@ import { CheckAppoitmentComponent } from './components/check-appoitment/check-ap
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AuthGuard } from './guard/auth.guard';
 
 
 const routes: Routes = [
-  {path:"home",component:HomeComponent},
+  {path:"",component:HomeComponent},
   {path:"signup",component:SignupComponent},
   {path:"login",component:LoginComponent},
-  {path:"appointment",component:AppointmentComponent},
+  {path:"appointment",component:AppointmentComponent },  
+  // ,canActivate:[AuthGuard]
   {path:"appointment-check",component:CheckAppoitmentComponent}
+  // ,canActivate:[AuthGuard]
 ];
 
 @NgModule({
