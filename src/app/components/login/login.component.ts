@@ -27,6 +27,9 @@ export class LoginComponent implements OnInit {
       if (this.loginform.invalid) {
         return;
     }
+    else if(this.loginform.valid){
+      this.authorizationService.login(this.loginform.value);
+    }
     
     this.authService.login().subscribe((respData:IUser[])=>
     {
@@ -39,7 +42,6 @@ export class LoginComponent implements OnInit {
         if(check_user)
         {
           alert("Login Successfull");
-          this.router.navigate(["/"]);
         }
         else
         alert("User Not Found");

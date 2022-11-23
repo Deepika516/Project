@@ -25,14 +25,14 @@
                     </li>
                     
                     <li class="nav-item login-signup position-relative ps-md-2 ms-md-2" routerLinkActive="active">
-                        <a class="nav-link px-md-3" routerLink="/login">Login</a>
+                        <a class="nav-link px-md-3" routerLink="/login" *ngIf="!isLogin" >Login</a>
                       </li>
                     <li class="nav-item" routerLinkActive="active">
-                        <a class="nav-link px-md-3" routerLink="/signup">Signup</a>
+                        <a class="nav-link px-md-3" routerLink="/signup" *ngIf="!isLogin" >Signup</a>
                     </li>
 
                     <li class="nav-item" routerLinkActive="active">
-                      <button class="btn btn-primay" (click)="onLogout()">Logout</button>
+                      <button class="btn btn-primay" (click)="onLogout()"  >Logout</button>
                   </li>
                     
               </ul>

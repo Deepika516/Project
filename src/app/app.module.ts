@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
+import { NgxPermissionsModule } from 'ngx-permissions'; 
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -36,7 +37,8 @@ import { CheckAppoitmentComponent } from './components/check-appoitment/check-ap
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AgGridModule
+    AgGridModule,
+    NgxPermissionsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

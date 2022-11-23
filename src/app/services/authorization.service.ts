@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientJsonpModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Router } from '@angular/router';
+import { BehaviorSubject, of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { delay, tap } from 'rxjs/operators';
 import { IUser } from '../interfaces/user.interface';
@@ -9,33 +10,26 @@ import { IUser } from '../interfaces/user.interface';
   providedIn: 'root'
 })
 export class AuthorizationService {
-  isUserLoggedIn: boolean = false;
-  constructor(private http:HttpClient) { }
-
-  login(userMail:string,password:string):Observable<any>{
+  isUserLoggedIn: BehaviorSubject<boolean>=new BehaviorSubject<boolean>(false);
   
-    console.log(userMail);
-    console.log(password);
-    this.isUserLoggedIn = userMail== "admin" && password=="admin123";
-    localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false"); 
+  constructor(private router:Router) { }
 
-    return of(this.isUserLoggedIn).pipe(
-      delay(500),
-      tap(val=>{
-        console.log("is user Authentication is successful:" + val);
-      })
-    )
-
-    // return (this.isUserLoggedIn).pipe(
-    //   delay(1000),
-    //   tap(val => { 
-    //      console.log("Is User Authentication is successful: " + val); 
-    //   })
-    
+  get isLoggedIn(){
+    return this.isUserLoggedIn.asObservable();
   }
 
-  logout():void {
-      this.isUserLoggedIn = false;
-      localStorage.removeItem('isUserLoggedIn');
+  login(cu:IUser){
+    if(cu.email !== "" && cu.password !== "")
+    {
+      this.isUserLoggedIn.next(true);
+      this.router.navigate(['/appointment']);
+    }
+
   }
+
+  logout(){
+    this.isUserLoggedIn.next(false);
+    this.router.navigate(['/login']);
+  }
+
 }
