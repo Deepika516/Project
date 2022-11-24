@@ -11,7 +11,7 @@ export class AuthService {
 
   
   constructor(private http:HttpClient) { }
-   isLoggedIn=false;
+  isLoggedIn=false;
   onSignup(firstName:string,lastName:string,email_id:string,password:string):Observable<IUser[]>
   {
     return this.http.post<IUser[]>("http://localhost:3000/Users",
@@ -25,10 +25,6 @@ export class AuthService {
     this.isLoggedIn=true;
     return this.http.get<IUser[]>("http://localhost:3000/Users");
    
-  }
-
-  logout(){
-   return this.isLoggedIn=false;
   }
 
   isAuthenticated(){

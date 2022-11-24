@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { GridApi } from 'ag-grid-community';
-import { single } from 'rxjs';
+import { Router } from '@angular/router';
 import { IDept, IDoc } from 'src/app/interfaces/dept.interface';
 import { IAppointment } from 'src/app/interfaces/userAppointment.interface';
 import { UserService } from 'src/app/services/user.service';
@@ -12,12 +11,12 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./appointment.component.css']
 })
 export class AppointmentComponent implements OnInit {
+  
   public appointmentForm !: FormGroup
   department:IDept[]=[];
   doctors:IDoc[]=[];
-  selectedDept = 0;
-  selectedDocs = 0;
-  constructor(private userServive:UserService,private formBuilder:FormBuilder) { }
+  
+  constructor(private userServive:UserService,private formBuilder:FormBuilder ,private router:Router) { }
 
    
   ngOnInit(): void {
@@ -48,6 +47,8 @@ export class AppointmentComponent implements OnInit {
     this.userServive.onAppointment(user_name,user_gen,user_email,user_dob,user_dept,user_doc,user_doa).subscribe((respond:IAppointment[])=>
     {
       alert("Booking Successful");
+      this.router.navigate(['/appointment-check'])
+
     })
   }
   }
@@ -63,5 +64,9 @@ export class AppointmentComponent implements OnInit {
     })
    
   }
+
+  onOptionsSelected(){
+    
+}
 }
 

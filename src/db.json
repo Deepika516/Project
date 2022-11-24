@@ -51,6 +51,13 @@
       "email": "pranav.miggi@gmail.com",
       "password": "angrybird",
       "id": 5
+    },
+    {
+      "first_name": "Tiny",
+      "last_name": "Aggerwal",
+      "email": "tiny.aggerwal@gmail.com",
+      "password": "tiny0424",
+      "id": 6
     }
   ],
   "appointment": [
@@ -153,6 +160,56 @@
       "doc": "Ms.Tiny",
       "doa": "2022-11-26T17:00",
       "id": 10
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "johndoe@gmail.com",
+      "dob": "2015-01-02",
+      "dept": "1",
+      "doc": "Mr.John",
+      "doa": "2022-12-05T10:00",
+      "id": 11
+    },
+    {
+      "name": "Tiny aggerwal",
+      "gender": "FEMALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "1995-12-04",
+      "dept": "1",
+      "doc": "Ms.Aggerwal",
+      "doa": "2022-12-04T19:00",
+      "id": 12
+    },
+    {
+      "name": "Aashu",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-08-15",
+      "dept": "1",
+      "doc": "Ms.Tiny",
+      "doa": "2022-12-04T00:00",
+      "id": 13
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-14",
+      "dept": "3",
+      "doc": "Ms.Aggerwal",
+      "doa": "2022-12-01T16:30",
+      "id": 14
+    },
+    {
+      "name": "prana",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-01",
+      "dept": "4",
+      "doc": "Ms.Daina",
+      "doa": "2022-12-04T15:30",
+      "id": 15
     }
   ],
   "department": [
@@ -171,14 +228,6 @@
     {
       "dept_name": "Neurology",
       "id": 4
-    },
-    {
-      "dept_name": "Urology",
-      "id": 5
-    },
-    {
-      "dept_name": "Psychology",
-      "id": 6
     }
   ],
   "doctors": [

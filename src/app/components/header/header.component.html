@@ -17,22 +17,22 @@
                     </li>
                     
                     <li class="nav-item" routerLinkActive="active">
-                      <a class="nav-link px-md-3"  routerLink="/appointment">Book Appointment</a>
+                      <a class="nav-link px-md-3"  routerLink="/appointment" *ngIf="(isUserLoggedIn$|async)">Book Appointment</a>
                     </li>
             
                     <li class="nav-item" routerLinkActive="active">
-                      <a class="nav-link px-md-3"  routerLink="/appointment-check">My Appointments</a>
+                      <a class="nav-link px-md-3"  routerLink="/appointment-check" *ngIf="(isUserLoggedIn$|async)">My Appointments</a>
                     </li>
                     
                     <li class="nav-item login-signup position-relative ps-md-2 ms-md-2" routerLinkActive="active">
-                        <a class="nav-link px-md-3" routerLink="/login" *ngIf="!isLogin" >Login</a>
+                        <a class="nav-link px-md-3" routerLink="/login" *ngIf="!(isUserLoggedIn$|async)" >Login</a>
                       </li>
                     <li class="nav-item" routerLinkActive="active">
-                        <a class="nav-link px-md-3" routerLink="/signup" *ngIf="!isLogin" >Signup</a>
+                        <a class="nav-link px-md-3" routerLink="/signup" *ngIf="!(isUserLoggedIn$|async)">Signup</a>
                     </li>
 
                     <li class="nav-item" routerLinkActive="active">
-                      <button class="btn btn-primay" (click)="onLogout()"  >Logout</button>
+                      <button class="btn btn-primay" (click)="onLogout()" *ngIf="(isUserLoggedIn$|async)"  >Logout</button>
                   </li>
                     
               </ul>

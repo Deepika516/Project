@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { disableDebugTools } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { IDept, IDoc } from '../interfaces/dept.interface';
 import { IAppointment } from '../interfaces/userAppointment.interface';
@@ -19,7 +18,6 @@ export class UserService {
     u_doc:string,
     u_doa:string,
     ):Observable<IAppointment[]>{
-      debugger
     return this.http.post<IAppointment[]>("http://localhost:3000/appointment",
     {
         name:u_name,
@@ -36,10 +34,6 @@ export class UserService {
     return this.http.get<IAppointment[]>("http://localhost:3000/appointment")
   }
 
-  getDataById(email:string):Observable<IAppointment[]>{
-    return this.http.get<IAppointment[]>(`http://localhost:3000/appointment/${email}`);
-  }
-
   showDept():Observable<IDept[]>{
     return this.http.get<IDept[]>("http://localhost:3000/department");
   }
@@ -48,7 +42,4 @@ export class UserService {
     return this.http.get<IDoc[]>("http://localhost:3000/doctors");
   }
 
-  removeData(id:number):Observable<IAppointment>{
-      return this.http.delete<IAppointment>("http://localhost:3000/employees/"+id)
-  }
 }
