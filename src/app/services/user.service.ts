@@ -9,7 +9,7 @@ import { IAppointment } from '../interfaces/userAppointment.interface';
 })
 export class UserService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
   onAppointment(u_name:string,
     u_gender:string,
     u_email:string,
@@ -29,7 +29,6 @@ export class UserService {
         doa:u_doa
     })
   }
-
   getData():Observable<IAppointment[]>{
     return this.http.get<IAppointment[]>("http://localhost:3000/appointment")
   }
@@ -38,8 +37,7 @@ export class UserService {
     return this.http.get<IDept[]>("http://localhost:3000/department");
   }
 
-  showDoc():Observable<IDoc[]>{
-    return this.http.get<IDoc[]>("http://localhost:3000/doctors");
+  showDoc(deptId:number):Observable<IDoc[]>{
+    return this.http.get<IDoc[]>(`http://localhost:3000/doctors?dept_id=${deptId}`);
   }
-
 }

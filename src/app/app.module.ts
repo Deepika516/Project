@@ -7,11 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 
-
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
-
 
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -27,8 +25,7 @@ import { CheckAppoitmentComponent } from './components/check-appoitment/check-ap
     HeaderComponent,
     HomeComponent,
     AppointmentComponent,
-    CheckAppoitmentComponent
-   
+    CheckAppoitmentComponent,
   ],
   imports: [
     BrowserModule,

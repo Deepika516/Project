@@ -156,7 +156,7 @@
       "gender": "MALE",
       "email": "pranav.miggi@gmail.com",
       "dob": "1993-07-24",
-      "dept": "4",
+      "dept": "Cardiology",
       "doc": "Ms.Tiny",
       "doa": "2022-11-26T17:00",
       "id": 10
@@ -166,7 +166,7 @@
       "gender": "MALE",
       "email": "johndoe@gmail.com",
       "dob": "2015-01-02",
-      "dept": "1",
+      "dept": "Cardiology",
       "doc": "Mr.John",
       "doa": "2022-12-05T10:00",
       "id": 11
@@ -176,7 +176,7 @@
       "gender": "FEMALE",
       "email": "tiny.aggerwal@gmail.com",
       "dob": "1995-12-04",
-      "dept": "1",
+      "dept": "Cardiology",
       "doc": "Ms.Aggerwal",
       "doa": "2022-12-04T19:00",
       "id": 12
@@ -186,7 +186,7 @@
       "gender": "MALE",
       "email": "tiny.aggerwal@gmail.com",
       "dob": "2022-08-15",
-      "dept": "1",
+      "dept": "Cardiology",
       "doc": "Ms.Tiny",
       "doa": "2022-12-04T00:00",
       "id": 13
@@ -196,7 +196,7 @@
       "gender": "MALE",
       "email": "tiny.aggerwal@gmail.com",
       "dob": "2022-11-14",
-      "dept": "3",
+      "dept": "Cardiology",
       "doc": "Ms.Aggerwal",
       "doa": "2022-12-01T16:30",
       "id": 14
@@ -206,10 +206,20 @@
       "gender": "MALE",
       "email": "tiny.aggerwal@gmail.com",
       "dob": "2022-11-01",
-      "dept": "4",
+      "dept": "Cardiology",
       "doc": "Ms.Daina",
       "doa": "2022-12-04T15:30",
       "id": 15
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-11",
+      "dept": "Cardiology",
+      "doc": "Ms.Tiny",
+      "doa": "2022-11-02T16:00",
+      "id": 16
     }
   ],
   "department": [
@@ -228,7 +238,16 @@
     {
       "dept_name": "Neurology",
       "id": 4
+    },
+    {
+      "dept_name": "Psychartric",
+      "id": 5
+    },
+    {
+      "dept_name": "Dermatology",
+      "id": 6
     }
+
   ],
   "doctors": [
     {
@@ -238,28 +257,58 @@
     },
     {
       "doc_id": 1002,
-      "dept_id": 2,
+      "dept_id": 1,
       "doc_name": "Ms.Tiny"
     },
     {
       "doc_id": 1003,
-      "dept_id": 3,
+      "dept_id": 2,
       "doc_name": "Mr.John"
     },
     {
       "doc_id": 1004,
-      "dept_id": 4,
+      "dept_id": 2,
       "doc_name": "Ms.Shine"
     },
     {
       "doc_id": 1005,
-      "dept_id": 5,
+      "dept_id": 3,
       "doc_name": "Ms.Aggerwal"
     },
     {
       "doc_id": 1006,
+      "dept_id": 3,
+      "doc_name": "Mr.ghosh"
+    },
+    {
+      "doc_id": 1007,
+      "dept_id": 4,
+      "doc_name": "Dr.Maria"
+    },
+    {
+      "doc_id": 1008,
+      "dept_id": 4,
+      "doc_name": "Dr.Abdu rozik"
+    },
+    {
+      "doc_id": 1009,
+      "dept_id": 5,
+      "doc_name": "Dr.Cheery"
+    },
+    {
+      "doc_id": 1010,
+      "dept_id": 5,
+      "doc_name": "Dr.Wilimson"
+    },
+    {
+      "doc_id": 1011,
       "dept_id": 6,
-      "doc_name": "Ms.Daina"
+      "doc_name": "Dr.Diksha"
+    },
+    {
+      "doc_id": 1012,
+      "dept_id": 6,
+      "doc_name": "Dr.Sain"
     }
   ]
 }

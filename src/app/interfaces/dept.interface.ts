@@ -1,6 +1,7 @@
 export interface IDept{
     dept_name:string,
-    id:number
+    id:number,
+    docs:string
 }
 
 export interface IDoc{
