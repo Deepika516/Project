@@ -22,7 +22,8 @@ export class LoginComponent implements OnInit {
       password:[""]
     })
   }
-
+// on the click of submit button it will check the form is valid or not then it will check whether the userid and password is same as 
+// as we saved in our database then if data is same the userid going to save on local storage 
   onSubmitLogin(){
     {
       if (this.loginform.invalid) {

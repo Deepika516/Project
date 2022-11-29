@@ -14,16 +14,14 @@ export class AuthorizationService {
   get isLoggedIn(){
     return this.isUserLoggedIn.asObservable();
   }
-
+// if the login user is authorized user it will navigate to appointment component
   login(cu:IUser){
     if(cu.email !== "" && cu.password !== "")
     {
       this.isUserLoggedIn.next(true);
       this.router.navigate(['/appointment']);
     }
-
   }
-
   logout(){
     this.isUserLoggedIn.next(false);
     this.router.navigate(['/login']);

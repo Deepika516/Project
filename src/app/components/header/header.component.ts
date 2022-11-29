@@ -10,7 +10,7 @@ import { AuthorizationService } from 'src/app/services/authorization.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isUserLoggedIn$ !: Observable<boolean>;
+  isUserLoggedIn$ !: Observable<boolean>; //  To check hte user is logged in or not
   
   constructor(private router:Router,private authorizationService:AuthorizationService) { }
 
@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
     this.isUserLoggedIn$ = this.authorizationService.isLoggedIn;
   }
  
+  // on the click of logout it remove the currentuser from local storage and navigate user to login in page 
   onLogout()
   {
       this.authorizationService.logout();

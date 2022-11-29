@@ -10,6 +10,7 @@ import { IAppointment } from '../interfaces/userAppointment.interface';
 export class UserService {
 
   constructor(private http:HttpClient) {}
+  // request to save the data on server for appoitment component
   onAppointment(u_name:string,
     u_gender:string,
     u_email:string,
@@ -29,14 +30,17 @@ export class UserService {
         doa:u_doa
     })
   }
+  //to show the appointment data we get the data from the server for appoitment check component
   getData():Observable<IAppointment[]>{
     return this.http.get<IAppointment[]>("http://localhost:3000/appointment")
   }
 
+// to show the departments on the dropdown we send the get request
   showDept():Observable<IDept[]>{
     return this.http.get<IDept[]>("http://localhost:3000/department");
   }
-
+  
+// on the click on specific department it will show the doctors through departments id
   showDoc(deptId:number):Observable<IDoc[]>{
     return this.http.get<IDoc[]>(`http://localhost:3000/doctors?dept_id=${deptId}`);
   }

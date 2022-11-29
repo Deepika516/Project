@@ -220,6 +220,16 @@
       "doc": "Ms.Tiny",
       "doa": "2022-11-02T16:00",
       "id": 16
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-05",
+      "dept": "6",
+      "doc": "Dr.Diksha",
+      "doa": "2022-12-03T18:20",
+      "id": 17
     }
   ],
   "department": [
@@ -247,7 +257,6 @@
       "dept_name": "Dermatology",
       "id": 6
     }
-
   ],
   "doctors": [
     {

@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
       password:[""]
     })
   }
-
+//on click it will submit the data on the database
   onSubmit(form:NgForm){
     const firstname=form.value.first_name;
     const lastname=form.value.last_name;

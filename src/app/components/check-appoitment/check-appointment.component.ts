@@ -6,17 +6,18 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-check-appoitment',
-  templateUrl: './check-appoitment.component.html',
-  styleUrls: ['./check-appoitment.component.css']
+  selector: 'app-check-appointment',
+  templateUrl: './check-appointment.component.html',
+  styleUrls: ['./check-appointment.component.css']
 })
-export class CheckAppoitmentComponent implements OnInit {
+export class CheckAppointmentComponent implements OnInit {
   
   public rowData:IAppointment[]=[];
   private gridApi!: GridApi;
   public rowSelection:"single"|"multiple"="single";
   private data = localStorage.getItem("currentUser");
- 
+
+  // to show the email address on currentuser which we store when we logged in
   constructor(private userService:UserService,private router:Router) { 
     localStorage.getItem("currentUser");
   }

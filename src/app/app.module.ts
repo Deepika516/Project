@@ -14,7 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
-import { CheckAppoitmentComponent } from './components/check-appoitment/check-appoitment.component';
+import { CheckAppointmentComponent } from './components/check-appoitment/check-appointment.component';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { CheckAppoitmentComponent } from './components/check-appoitment/check-ap
     HeaderComponent,
     HomeComponent,
     AppointmentComponent,
-    CheckAppoitmentComponent,
+    CheckAppointmentComponent,
   ],
   imports: [
     BrowserModule,

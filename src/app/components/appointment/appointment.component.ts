@@ -33,12 +33,12 @@ export class AppointmentComponent implements OnInit {
     })
   }
 
+  // to submit the appointment details and and check the details  
   onSubmitAppointment(){
     {
       if (this.appointmentForm.invalid) {
         return;
     }
-    debugger
     const user_name=this.appointmentForm.value.name;
     const user_gen=this.appointmentForm.value.gender;
     const user_dob=this.appointmentForm.value.dob;
@@ -55,6 +55,7 @@ export class AppointmentComponent implements OnInit {
   }
   }
 
+  //to show department in the dropdown
   getDept()
   {
     this.userService.showDept().pipe(take(1)).subscribe((respData:IDept[])=>{
@@ -62,6 +63,7 @@ export class AppointmentComponent implements OnInit {
     });
   }
  
+  //on the click of department change event click and through department id doctors will show in dependent dropdown
   changeDept(event:any){
   let deptId=event.target.value;
     this.userService.showDoc(+deptId).pipe(take(1))
