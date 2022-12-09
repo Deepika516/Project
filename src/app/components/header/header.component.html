@@ -19,6 +19,10 @@
                     <li class="nav-item" routerLinkActive="active">
                       <a class="nav-link px-md-3"  routerLink="/appointment" *ngIf="(isUserLoggedIn$|async)">Book Appointment</a>
                     </li>
+
+                    <li class="nav-item" routerLinkActive="active">
+                      <a class="nav-link px-md-3"  routerLink="/labtests" *ngIf="(isUserLoggedIn$|async)">Tests & Diagnosis</a>
+                    </li>
             
                     <li class="nav-item" routerLinkActive="active">
                       <a class="nav-link px-md-3"  routerLink="/appointment-check" *ngIf="(isUserLoggedIn$|async)">My Appointments</a>

@@ -1,0 +1,107 @@
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Test/Diagnosis Booking</p>
+                  
+                    <form form [formGroup]="testForm" (ngSubmit)=" onSubmitTest()" class="mx-1 mx-md-4" >
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" >Name</label>
+                        <input type="text" class="form-control" formControlName="name" name="name"  />
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" >Email </label>
+                        <input type="email"  class="form-control"  formControlName="email" name="email" />
+                      </div>
+                    </div>
+
+<!-- For filter lab test and diagnosis Dropdown -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label for="test" class="form-label">Lab_Tests/Diagnosis</label><br>
+                          <div class="containter">
+                           <div class="form-check form-check-inline" *ngFor="let serviceData of testList">
+                            <label>
+                              <input class="form-check-input" type="radio" name="test" value={{serviceData.test_id}}
+                                (change)="changeDiagnosis($event)">
+                              <img src="{{serviceData.test_img}}" alt="Option 1">{{serviceData.test_name}}
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+<!-- !-- For test services Dropdown --> 
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <label for="testService" class="form-label">Test Services</label><br>
+                             <select class="select"   class="form-control" id="testService"  (change)="changeService($event)" formControlName="testService" name="testService" >                 
+                                <option>Choose Service</option>
+                              <option  *ngFor="let service of serviceList"  value="{{service.service_id}}" >{{service.service_name}}</option>
+                            </select>
+                          </div>
+                        </div>
+
+<!-- For SubServices checkboxes -->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <div class="form-check form-check-inline">
+                              <!-- <label for="testService" class="form-label">Sub Services</label><br> -->
+                              <div class="check"  *ngFor="let sub of subServiceList">
+                              <input  class="form-check-input"
+                              
+                                (change)="onCheckboxChange($event)"
+                               type="checkbox" 
+                               
+                               value="{{sub.subService_id}}"
+                               
+                                id="flexCheckChecked" >
+                              <label class="form-check-label" for="flexCheckChecked" >
+                                {{sub.subService_name}}
+                                <!-- [checked]="{{sub.select}}"  -->
+                              </label>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+
+<!-- For datetime picker -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" >Date for Appointment</label>
+                          <input type="datetime-local" id="date" class="form-control" formControlName="date"  name="date">
+                        </div>
+                      </div>
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" class="btn btn-primary btn-lg">Book Test</button>
+                    </div>           
+                      </form>
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                  <img src="../../../assets/img/test.png" 
+                    class="img-fluid" alt="Sample image">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

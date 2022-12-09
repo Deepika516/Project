@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { CheckAppointmentComponent } from './components/check-appoitment/check-appointment.component';
+import { LabTestsComponent } from './components/lab-tests/lab-tests.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CheckAppointmentComponent } from './components/check-appoitment/check-a
     HomeComponent,
     AppointmentComponent,
     CheckAppointmentComponent,
+    LabTestsComponent,
   ],
   imports: [
     BrowserModule,

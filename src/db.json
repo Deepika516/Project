@@ -58,6 +58,20 @@
       "email": "tiny.aggerwal@gmail.com",
       "password": "tiny0424",
       "id": 6
+    },
+    {
+      "first_name": "shraddha",
+      "last_name": "bhalerao",
+      "email": "shraddha.b@gmail.com",
+      "password": "12345678",
+      "id": 7
+    },
+    {
+      "first_name": "akshit",
+      "last_name": "Doe",
+      "email": "akdoe@gmail.com",
+      "password": "akdoe123",
+      "id": 8
     }
   ],
   "appointment": [
@@ -230,6 +244,36 @@
       "doc": "Dr.Diksha",
       "doa": "2022-12-03T18:20",
       "id": 17
+    },
+    {
+      "name": "Hina sharma",
+      "gender": "FEMALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-12-02",
+      "dept": "5",
+      "doc": "Dr.Cheery",
+      "doa": "2022-12-08T19:20",
+      "id": 18
+    },
+    {
+      "name": "kittu sharma",
+      "gender": "FEMALE",
+      "email": "shraddha.b@gmail.com",
+      "dob": "2022-12-10",
+      "dept": "1",
+      "doc": "Ms.Jenny",
+      "doa": "2023-01-01T16:24",
+      "id": 19
+    },
+    {
+      "name": "akshit",
+      "gender": "MALE",
+      "email": "akdoe@gmail.com",
+      "dob": "2022-12-07",
+      "dept": "6",
+      "doc": "Dr.Diksha",
+      "doa": "2022-12-27T19:50",
+      "id": 20
     }
   ],
   "department": [
@@ -318,6 +362,60 @@
       "doc_id": 1012,
       "dept_id": 6,
       "doc_name": "Dr.Sain"
+    }
+  ],
+  "tests": [
+    {
+      "d_id": "",
+      "d_name": "",
+      "d_email": "",
+      "d_test": "",
+      "d_testService": "",
+      "d_date": "",
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "test": "",
+      "testService": "",
+      "date": "",
+      "id": 2
+    },
+    {
+      "name": "John",
+      "email": "angrybird24@mail.com",
+      "testName": "5001",
+      "testService": "",
+      "date": "2022-12-09T16:29",
+      "id": 3
+    },
+    {
+      "name": "John",
+      "email": "tiny.aggerwal@gmail.com",
+      "testName": "",
+      "testService": "115",
+      "subservice": "115",
+      "date": "2022-12-22T18:58",
+      "id": 4
+    },
+    {
+      "name": "John",
+      "email": "tiny.aggerwal@gmail.com",
+      "testName": "",
+      "testService": "115",
+      "subservice": "115",
+      "date": "2022-12-01T16:00",
+      "id": 5
+    },
+    {
+      "name": "kittu sharma",
+      "email": "angrybird24@mail.com",
+      "testName": "",
+      "testService": "115",
+      "subservice": "115",
+      "date": "2022-12-16T17:19",
+      "id": 6
     }
   ]
 }

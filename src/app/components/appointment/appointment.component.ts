@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import {  take } from 'rxjs';
+import { take } from 'rxjs';
 import { IDept, IDoc } from 'src/app/interfaces/dept.interface';
 import { IAppointment } from 'src/app/interfaces/userAppointment.interface';
 import { UserService } from 'src/app/services/user.service';
+
 
 @Component({
   selector: 'app-appointment',
