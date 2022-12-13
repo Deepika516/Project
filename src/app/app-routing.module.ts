@@ -9,18 +9,25 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AuthGuard } from './guard/auth.guard';
 
-
 const routes: Routes = [
-  {path:"",component:HomeComponent},
-  {path:"signup",component:SignupComponent},
-  {path:"login",component:LoginComponent},
-  {path:"appointment",component:AppointmentComponent,canActivate:[AuthGuard] }, 
-  {path:"labtests",component:LabTestsComponent,canActivate:[AuthGuard]}, // to protect these pages from not authorized user 
-  {path:"appointment-check",component:CheckAppointmentComponent,canActivate:[AuthGuard]}
+  { path: '', component: HomeComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'appointment',
+    component: AppointmentComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'labtests', component: LabTestsComponent }, // to protect these pages from not authorized user
+  {
+    path: 'appointment-check',
+    component: CheckAppointmentComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

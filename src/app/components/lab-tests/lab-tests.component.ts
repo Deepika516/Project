@@ -54,9 +54,8 @@ export class LabTestsComponent implements OnInit {
   }
 
   //To change the test calling change event and shows dependent services in dropdown
-  changeDiagnosis(event: any) {
-    debugger;
-    let testId = event.target.value;
+  changeDiagnosis() {
+    let testId = this.testForm.controls['testName'].value;
     this.serviceList = this.testService
       .getTestServices()
       .filter((t) => t.test_id == testId);
@@ -72,6 +71,18 @@ export class LabTestsComponent implements OnInit {
     console.log(this.subServiceList);
   }
 
+  onCheckChange(event: any) {
+    const checkid = event.target.value;
+    console.log(checkid);
+    this.subServiceList = this.subServiceList.filter(
+      (e) => e.subService_id == checkid
+    );
+
+    const isChecked = event.target.checked;
+    // console.log(checkname);
+    console.log(this.testForm.controls['subService'].value);
+  }
+
   onSubmitTest() {
     if (this.testForm.invalid) {
       return;
@@ -79,7 +90,9 @@ export class LabTestsComponent implements OnInit {
     debugger;
     const user_t_name = this.testForm.value.name;
     const user_t_email = this.testForm.value.email;
-    const user_t_testName = this.testForm.value.testName;
+    const user_t_testName =
+      this.testList.find((e) => e.test_id == this.testForm.value.testName)
+        ?.test_name || '';
 
     const user_t_testServiceName =
       this.serviceList.find(
@@ -104,12 +117,4 @@ export class LabTestsComponent implements OnInit {
         console.log(respData);
       });
   }
-
-  // onCheckboxChange(event: any) {
-  //   // this.checkboxList=this.testForm.value.subService
-  //   const checkname = event.target.value;
-  //   const isChecked = event.target.checked;
-  //   console.log(checkname);
-  //   this.checkboxList = this.get
-  // }
 }
