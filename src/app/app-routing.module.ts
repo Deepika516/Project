@@ -18,7 +18,7 @@ const routes: Routes = [
     component: AppointmentComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'labtests', component: LabTestsComponent }, // to protect these pages from not authorized user
+  { path: 'labtests', component: LabTestsComponent, canActivate: [AuthGuard] },
   {
     path: 'appointment-check',
     component: CheckAppointmentComponent,

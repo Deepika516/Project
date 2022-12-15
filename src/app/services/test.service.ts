@@ -49,49 +49,48 @@ export class TestService {
       {
         subService_id: 1501,
         service_id: 115,
-        select: false,
         subService_name: 'X-RAY both Kneen',
       },
       {
         subService_id: 1502,
         service_id: 115,
-        select: false,
+
         subService_name: 'X-RAY chest',
       },
       {
         subService_id: 1503,
         service_id: 115,
-        select: false,
+
         subService_name: 'X-RAY spine',
       },
       {
         subService_id: 1504,
         service_id: 115,
-        select: false,
+
         subService_name: 'X-RAY neck',
       },
       {
         subService_id: 1505,
         service_id: 116,
-        select: false,
+
         subService_name: 'CT-SCAN spine',
       },
       {
         subService_id: 1506,
         service_id: 116,
-        select: false,
+
         subService_name: 'CT-SCAN whole body',
       },
       {
         subService_id: 1507,
         service_id: 116,
-        select: false,
+
         subService_name: 'CT-SCAN nesk',
       },
       {
         subService_id: 1508,
         service_id: 116,
-        select: false,
+
         subService_name: 'CT-SCAN cervical spine',
       },
     ];

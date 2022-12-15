@@ -1,50 +1,54 @@
 <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand fw-bold" href="#">
-              Medi<span class="text-primary">Cure</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand fw-bold" href="#">
+            Medi<span class="text-primary">Cure</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                       true}">
-                      <a class="nav-link px-md-3"  routerLink="/">Home </a>
-                    </li>
-                    
-                    <li class="nav-item" routerLinkActive="active">
-                      <a class="nav-link px-md-3"  routerLink="/appointment" *ngIf="(isUserLoggedIn$|async)">Book Appointment</a>
-                    </li>
+                <a class="nav-link px-md-3" routerLink="/">Home </a>
+              </li>
 
-                    <li class="nav-item" routerLinkActive="active">
-                      <a class="nav-link px-md-3"  routerLink="/labtests" *ngIf="(isUserLoggedIn$|async)">Tests & Diagnosis</a>
-                    </li>
-            
-                    <li class="nav-item" routerLinkActive="active">
-                      <a class="nav-link px-md-3"  routerLink="/appointment-check" *ngIf="(isUserLoggedIn$|async)">My Appointments</a>
-                    </li>
-                    
-                    <li class="nav-item login-signup position-relative ps-md-2 ms-md-2" routerLinkActive="active">
-                        <a class="nav-link px-md-3" routerLink="/login" *ngIf="!(isUserLoggedIn$|async)" >Login</a>
-                      </li>
-                    <li class="nav-item" routerLinkActive="active">
-                        <a class="nav-link px-md-3" routerLink="/signup" *ngIf="!(isUserLoggedIn$|async)">Signup</a>
-                    </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link px-md-3" routerLink="/appointment" *ngIf="(isUserLoggedIn$|async)">Book
+                  Appointment</a>
+              </li>
 
-                    <li class="nav-item" routerLinkActive="active">
-                      <button class="btn btn-primay" (click)="onLogout()" *ngIf="(isUserLoggedIn$|async)"  >Logout</button>
-                  </li>
-                    
-              </ul>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link px-md-3" routerLink="/labtests" *ngIf="(isUserLoggedIn$|async)">Tests & Diagnosis</a>
+              </li>
 
-            </div>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link px-md-3" routerLink="/appointment-check" *ngIf="(isUserLoggedIn$|async)">My
+                  Appointments</a>
+              </li>
 
-          </nav>
-        </div>
+              <li class="nav-item login-signup position-relative ps-md-2 ms-md-2" routerLinkActive="active">
+                <a class="nav-link px-md-3" routerLink="/login" *ngIf="!(isUserLoggedIn$|async)">Login</a>
+              </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link px-md-3" routerLink="/signup" *ngIf="!(isUserLoggedIn$|async)">Signup</a>
+              </li>
+
+              <li class="nav-item" routerLinkActive="active">
+                <button class="btn btn-primay" (click)="onLogout()" *ngIf="(isUserLoggedIn$|async)">Logout</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </nav>
       </div>
     </div>
-  </header>
+  </div>
+</header>
