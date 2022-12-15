@@ -1,17 +1,18 @@
-.btn-xl {
-    padding: 1.25rem 2.25rem;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 10rem;
+
+/*banner sec*/
+@media (min-width: 768px){
+	.banner-sec .banner-content {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 9%;
+		max-width: 450px;
+	}
 }
 
-hr.divider {
-    height: 0.2rem;
-    max-width: 3.25rem;
-    margin: 1.5rem auto;
-    background-color: primary;
-    opacity: 1;
+@media (max-width: 767px){
+	br{
+		display: none;
+	}
 }
 

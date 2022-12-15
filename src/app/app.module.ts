@@ -4,30 +4,30 @@ import{FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
-import { AdminComponent } from './components/admin/admin.component';
 
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
-import { CheckAppoitmentComponent } from './components/check-appoitment/check-appoitment.component';
+import { CheckAppointmentComponent } from './components/check-appoitment/check-appointment.component';
+import { LabTestsComponent } from './components/lab-tests/lab-tests.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    AdminComponent,
     HeaderComponent,
     HomeComponent,
     AppointmentComponent,
-    CheckAppoitmentComponent,
-    
+    CheckAppointmentComponent,
+    LabTestsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,7 @@ import { CheckAppoitmentComponent } from './components/check-appoitment/check-ap
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AgGridModule
+    AgGridModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

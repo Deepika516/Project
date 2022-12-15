@@ -8,15 +8,12 @@
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
   
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Schedule Your Appointment</p>
-  
-                  
-                    
-                        <form [formGroup]="appointmentForm" (ngSubmit)="onSubmitAppointment()">
+                  <form [formGroup]="appointmentForm" (ngSubmit)="onSubmitAppointment()">
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" >Name</label>
-                        <input type="text" class="form-control"  formControlName="name" ngModel name="name"/>
+                        <input type="text" class="form-control"  formControlName="name"  name="name"/>
                       </div>
                     </div>
   <!-- For Date of Birth -->
@@ -24,7 +21,7 @@
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="dob">DOB:</label>
-                            <input type="date" id="dob" class="form-control" formControlName="dob" ngModel name="dob">
+                            <input type="date" id="dob" class="form-control" formControlName="dob" name="dob">
                       </div>
                     </div>
   <!-- For Gender (Radio Buttons) -->
@@ -33,26 +30,43 @@
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" >Gender</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" formControlName="gender" ngModel name="gender" id="inlineRadio1" value="MALE">
+                            <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="inlineRadio1" value="MALE">
                             <label class="form-check-label" for="inlineRadio1">Male</label>
-                          </div>
+                        </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" formControlName="gender" ngModel name="gender" id="inlineRadio2" value="FEMALE">
+                            <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="inlineRadio2" value="FEMALE">
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                           </div>
                       </div>
                     </div>
+ <!-- For Email -->
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-check-label" >Email </label>
+                          <input type="email"  class="form-control" formControlName="email" name="email" />
+                        </div>
+                      </div>
+
 <!-- For Department Dropdown -->
                     <div class="d-flex flex-row align-items-center mb-4">
                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                         <div class="form-outline flex-fill mb-0">
                             <label for="dept" class="form-label">Department:</label><br>
-                             <select name="dept" class="form-control" id="dept" formControlName="dept" ngModel name="dept">
-                              <option value="Cardiology">Cardiology</option>
-                              <option value="Radiology">Radiology</option>
-                              <option value="Neurology">Neurology</option>
-                              <option value="Gyne">Gyne</option>
-                              <option value="Orthopaedric">Orthopaedric</option>
+                             <select select class="custom-select mb-3" (change)="changeDept($event)" name="dept" class="form-control" id="dept" formControlName="dept" name="dept">
+                              <option *ngFor = "let dept of department" value="{{dept.id}}" >{{dept.dept_name}}</option>
+                            </select>
+                          </div>
+                        </div>
+
+<!-- !-- For Doctor Dropdown --> 
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <label for="doc" class="form-label">Doctor:</label><br>
+                             <select class="custom-select mb-3"  placeHolderName="Doctors" name="doc" class="form-control" id="doc" formControlName="doc" name="doc">
+                              <option>Choose Doctor</option>
+                              <option *ngFor ="let doc of doctors">{{doc.doc_name}}</option>
                             </select>
                           </div>
                         </div>
@@ -65,11 +79,11 @@
                         <input type="datetime-local" id="doa" class="form-control" formControlName="doa" ngModel name="doa">
                       </div>
                     </div>
-  
+                    
+  <!--For Submit button -->
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                       <button type="submit" class="btn btn-primary btn-lg"  >Book</button>
-
-                    </div>
+                   </div>
                   </form>
                   
                 </div>

@@ -44,6 +44,34 @@
       "email": "aashish1592@gmail.com",
       "password": "aashu1234",
       "id": 4
+    },
+    {
+      "first_name": "Pranav ",
+      "last_name": "Miglani",
+      "email": "pranav.miggi@gmail.com",
+      "password": "angrybird",
+      "id": 5
+    },
+    {
+      "first_name": "Tiny",
+      "last_name": "Aggerwal",
+      "email": "tiny.aggerwal@gmail.com",
+      "password": "tiny0424",
+      "id": 6
+    },
+    {
+      "first_name": "shraddha",
+      "last_name": "bhalerao",
+      "email": "shraddha.b@gmail.com",
+      "password": "12345678",
+      "id": 7
+    },
+    {
+      "first_name": "akshit",
+      "last_name": "Doe",
+      "email": "akdoe@gmail.com",
+      "password": "akdoe123",
+      "id": 8
     }
   ],
   "appointment": [
@@ -51,7 +79,9 @@
       "name": "Deepika Mahindroo",
       "gender": "FEMALE",
       "dob": "2022-11-11",
-      "category": "hr",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
       "id": 1
     },
@@ -59,7 +89,9 @@
       "name": "John",
       "gender": "MALE",
       "dob": "2022-11-05",
-      "category": "hr",
+      "email": "johndoe@gmail.com",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-04T14:00",
       "id": 2
     },
@@ -67,7 +99,9 @@
       "name": "tiny",
       "gender": "FEMALE",
       "dob": "2022-11-03",
-      "category": "hr",
+      "email": "tiny0424@gmail.com",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-01T15:00",
       "id": 3
     },
@@ -75,38 +109,378 @@
       "name": "jenny",
       "gender": "FEMALE",
       "dob": "2022-11-11",
+      "email": "jenny@gmail.com",
       "dept": "Cardiology",
+      "doc": "Dr.Jenny",
       "doa": "2022-11-03T15:00",
       "id": 4
-    }
-  ],
-  "department":[
-    {
-      "dept_name":"Cardiology",
-      "id":101
     },
     {
-      "dept_name":"Radiology",
-      "id":101
+      "name": "Aashu",
+      "gender": "MALE",
+      "dob": "2022-09-15",
+      "email": "aashish1592@gmail.com",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-01T10:00",
+      "id": 5
+    },
+    {
+      "name": "Deepika Mahindroo",
+      "gender": "FEMALE",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "dob": "2022-11-09",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-18T14:50",
+      "id": 6
+    },
+    {
+      "name": "Deepika Mahindroo",
+      "gender": "FEMALE",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "dob": "2022-11-04",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-04T13:40",
+      "id": 7
+    },
+    {
+      "name": "Deepika Mahindroo",
+      "gender": "FEMALE",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "dob": "2022-11-11",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-19T13:50",
+      "id": 8
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "johndoe@gmail.com",
+      "dob": "2022-11-24",
+      "dept": "Cardiology",
+      "doc": "Dr.Jenny",
+      "doa": "2022-11-25T14:00",
+      "id": 9
+    },
+    {
+      "name": "Pranav",
+      "gender": "MALE",
+      "email": "pranav.miggi@gmail.com",
+      "dob": "1993-07-24",
+      "dept": "Cardiology",
+      "doc": "Ms.Tiny",
+      "doa": "2022-11-26T17:00",
+      "id": 10
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "johndoe@gmail.com",
+      "dob": "2015-01-02",
+      "dept": "Cardiology",
+      "doc": "Mr.John",
+      "doa": "2022-12-05T10:00",
+      "id": 11
+    },
+    {
+      "name": "Tiny aggerwal",
+      "gender": "FEMALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "1995-12-04",
+      "dept": "Cardiology",
+      "doc": "Ms.Aggerwal",
+      "doa": "2022-12-04T19:00",
+      "id": 12
+    },
+    {
+      "name": "Aashu",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-08-15",
+      "dept": "Cardiology",
+      "doc": "Ms.Tiny",
+      "doa": "2022-12-04T00:00",
+      "id": 13
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-14",
+      "dept": "Cardiology",
+      "doc": "Ms.Aggerwal",
+      "doa": "2022-12-01T16:30",
+      "id": 14
+    },
+    {
+      "name": "prana",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-01",
+      "dept": "Cardiology",
+      "doc": "Ms.Daina",
+      "doa": "2022-12-04T15:30",
+      "id": 15
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-11",
+      "dept": "Cardiology",
+      "doc": "Ms.Tiny",
+      "doa": "2022-11-02T16:00",
+      "id": 16
+    },
+    {
+      "name": "John",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-11-05",
+      "dept": "6",
+      "doc": "Dr.Diksha",
+      "doa": "2022-12-03T18:20",
+      "id": 17
+    },
+    {
+      "name": "Hina sharma",
+      "gender": "FEMALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-12-02",
+      "dept": "5",
+      "doc": "Dr.Cheery",
+      "doa": "2022-12-08T19:20",
+      "id": 18
+    },
+    {
+      "name": "kittu sharma",
+      "gender": "FEMALE",
+      "email": "shraddha.b@gmail.com",
+      "dob": "2022-12-10",
+      "dept": "1",
+      "doc": "Ms.Jenny",
+      "doa": "2023-01-01T16:24",
+      "id": 19
+    },
+    {
+      "name": "akshit",
+      "gender": "MALE",
+      "email": "akdoe@gmail.com",
+      "dob": "2022-12-07",
+      "dept": "6",
+      "doc": "Dr.Diksha",
+      "doa": "2022-12-27T19:50",
+      "id": 20
+    },
+    {
+      "name": "vasu",
+      "gender": "MALE",
+      "email": "tmohindroo@yahoo.com",
+      "dob": "2022-12-07",
+      "dept": "Radiology",
+      "doc": "Ms.Shine",
+      "doa": "2022-12-07T14:19",
+      "id": 21
+    },
+    {
+      "name": "vasu",
+      "gender": "MALE",
+      "email": "tiny.aggerwal@gmail.com",
+      "dob": "2022-12-01",
+      "dept": "Neurology",
+      "doc": "Dr.Maria",
+      "doa": "2022-12-01T15:22",
+      "id": 22
     }
- ],
- "doctors":[
-  {
-    "dr_name":"Dr.Rizwan",
-    "id":101
-  },
-  {
-    "dr_name":"Dr.Haris",
-    "id":101
-  },
-  {
-    "dr_name":"Dr.Volt",
-    "id":102
-  },
-  {
-    "dr_name":"Dr.Jenny",
-    "id":102
-  }
-
- ]
+  ],
+  "department": [
+    {
+      "dept_name": "Cardiology",
+      "id": 1
+    },
+    {
+      "dept_name": "Radiology",
+      "id": 2
+    },
+    {
+      "dept_name": "Oncology",
+      "id": 3
+    },
+    {
+      "dept_name": "Neurology",
+      "id": 4
+    },
+    {
+      "dept_name": "Psychartric",
+      "id": 5
+    },
+    {
+      "dept_name": "Dermatology",
+      "id": 6
+    }
+  ],
+  "doctors": [
+    {
+      "doc_id": 1001,
+      "dept_id": 1,
+      "doc_name": "Ms.Jenny"
+    },
+    {
+      "doc_id": 1002,
+      "dept_id": 1,
+      "doc_name": "Ms.Tiny"
+    },
+    {
+      "doc_id": 1003,
+      "dept_id": 2,
+      "doc_name": "Mr.John"
+    },
+    {
+      "doc_id": 1004,
+      "dept_id": 2,
+      "doc_name": "Ms.Shine"
+    },
+    {
+      "doc_id": 1005,
+      "dept_id": 3,
+      "doc_name": "Ms.Aggerwal"
+    },
+    {
+      "doc_id": 1006,
+      "dept_id": 3,
+      "doc_name": "Mr.ghosh"
+    },
+    {
+      "doc_id": 1007,
+      "dept_id": 4,
+      "doc_name": "Dr.Maria"
+    },
+    {
+      "doc_id": 1008,
+      "dept_id": 4,
+      "doc_name": "Dr.Abdu rozik"
+    },
+    {
+      "doc_id": 1009,
+      "dept_id": 5,
+      "doc_name": "Dr.Cheery"
+    },
+    {
+      "doc_id": 1010,
+      "dept_id": 5,
+      "doc_name": "Dr.Wilimson"
+    },
+    {
+      "doc_id": 1011,
+      "dept_id": 6,
+      "doc_name": "Dr.Diksha"
+    },
+    {
+      "doc_id": 1012,
+      "dept_id": 6,
+      "doc_name": "Dr.Sain"
+    }
+  ],
+  "tests": [
+    {
+      "d_id": "",
+      "d_name": "",
+      "d_email": "",
+      "d_test": "",
+      "d_testService": "",
+      "d_date": "",
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "test": "",
+      "testService": "",
+      "date": "",
+      "id": 2
+    },
+    {
+      "name": "John",
+      "email": "angrybird24@mail.com",
+      "testName": "5001",
+      "testService": "",
+      "date": "2022-12-09T16:29",
+      "id": 3
+    },
+    {
+      "name": "John",
+      "email": "tiny.aggerwal@gmail.com",
+      "testName": "",
+      "testService": "115",
+      "subservice": "115",
+      "date": "2022-12-22T18:58",
+      "id": 4
+    },
+    {
+      "name": "John",
+      "email": "tiny.aggerwal@gmail.com",
+      "testName": "",
+      "testService": "115",
+      "subservice": "115",
+      "date": "2022-12-01T16:00",
+      "id": 5
+    },
+    {
+      "name": "kittu sharma",
+      "email": "angrybird24@mail.com",
+      "testName": "",
+      "testService": "115",
+      "subservice": "115",
+      "date": "2022-12-16T17:19",
+      "id": 6
+    },
+    {
+      "name": "John",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "testName": "",
+      "testService": "X-RAY",
+      "subservice": "",
+      "date": "2022-12-22T15:38",
+      "id": 7
+    },
+    {
+      "name": "Tiny aggerwal",
+      "email": "angrybird24@mail.com",
+      "testName": "",
+      "testService": "X-RAY",
+      "subservice": "",
+      "date": "2022-12-16T16:09",
+      "id": 8
+    },
+    {
+      "name": "kittu sharma",
+      "email": "angrybird24@mail.com",
+      "testName": "",
+      "testService": "X-RAY",
+      "subservice": "",
+      "date": "2022-12-02T17:22",
+      "id": 9
+    },
+    {
+      "name": "John",
+      "email": "tiny.aggerwal@gmail.com",
+      "testName": "",
+      "testService": "X-RAY",
+      "subservice": "",
+      "date": "2022-12-31T18:16",
+      "id": 10
+    },
+    {
+      "name": "Aashie",
+      "email": "ashish1592@gmail.com",
+      "testName": "Radiology Services",
+      "testService": "X-RAY",
+      "subservice": "",
+      "date": "2022-12-30T12:44",
+      "id": 11
+    }
+  ]
 }
