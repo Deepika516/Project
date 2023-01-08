@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { InjectSetupWrapper } from '@angular/core/testing';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { CellClickedEvent, SelectionChangedEvent } from 'ag-grid-community';
-import { DropListener } from 'ag-grid-community/dist/lib/headerRendering/columnDrag/bodyDropTarget';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import {
   IDiagnosis,
   IService,
@@ -34,23 +32,43 @@ export class LabTestsComponent implements OnInit {
   serviceList: IService[] = [];
   subServiceList: ISubService[] = [];
   checkboxList = [];
-  tempTestName = '';
+  selectedSubServices: (ISubService | null)[] = [];
+  subscription: Subscription = new Subscription();
+  get subServices(): FormArray {
+    return this.testForm.get('subService') as FormArray;
+  }
   ngOnInit(): void {
     this.testForm = this.formBuilder.group({
       name: [''],
       email: [''],
       testName: [''],
       testService: [''],
-      subService: [''],
+      subService: this.formBuilder.array([]),
       date: [''],
     });
+
+    const control = this.testForm.controls['subService'];
+  }
+
+  onChange(isChecked, subServiceName: string) {
+    const formArray = <FormArray>this.testForm.get('subService');
+    if (isChecked.checked) {
+      formArray.push(new FormControl(subServiceName));
+    } else {
+      let index = formArray.controls.findIndex(
+        (x) => x.value === subServiceName
+      );
+      formArray.removeAt(index);
+    }
+  }
+
+  ngDestroy() {
+    this.subscription.unsubscribe();
   }
 
   // To get all the Test Name in Radio Buttons
   getAllDiagnosisData() {
     this.testList = this.testService.getTest();
-    // this.serviceList=this.testService.getTestServices();
-    console.log(this.testList);
   }
 
   //To change the test calling change event and shows dependent services in dropdown
@@ -62,24 +80,20 @@ export class LabTestsComponent implements OnInit {
   }
 
   //to chnage the service   calling change event and shows dependent subservices in dropdown
-  changeService(event: any) {
-    debugger;
+  changeService(event) {
     let serviceId = event.target.value;
     this.subServiceList = this.testService
       .getSubService()
       .filter((u) => u.service_id == serviceId);
-    console.log(this.subServiceList);
   }
 
-  onCheckChange(event: any) {
+  onCheckChange(event) {
     const checkid = event.target.value;
     console.log(checkid);
     this.subServiceList = this.subServiceList.filter(
       (e) => e.subService_id == checkid
     );
-
     const isChecked = event.target.checked;
-    // console.log(checkname);
     console.log(this.testForm.controls['subService'].value);
   }
 
@@ -87,7 +101,6 @@ export class LabTestsComponent implements OnInit {
     if (this.testForm.invalid) {
       return;
     }
-    debugger;
     const user_t_name = this.testForm.value.name;
     const user_t_email = this.testForm.value.email;
     const user_t_testName =
@@ -98,10 +111,8 @@ export class LabTestsComponent implements OnInit {
       this.serviceList.find(
         (e) => e.service_id == this.testForm.value.testService
       )?.service_name || '';
-    const user_t_subserviceName =
-      this.subServiceList.find(
-        (e) => e.subService_id == this.testForm.value.subService
-      )?.subService_name || '';
+    const user_t_subserviceName = this.testForm.value.subService;
+
     const user_t_date = this.testForm.value.date;
     this.userService
       .getTestData(
@@ -114,7 +125,6 @@ export class LabTestsComponent implements OnInit {
       )
       .subscribe((respData: IDiagnosis[]) => {
         alert('Test Appointment Successfull');
-        console.log(respData);
       });
   }
 }

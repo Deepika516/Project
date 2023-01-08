@@ -26,7 +26,7 @@
                     </div>
                   </div>
 
-                  <!-- For filter lab test and diagnosis Dropdown -->
+                  <!-- For filter lab test and diagnosis Radio Button -->
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
@@ -61,14 +61,11 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <div class="form-check form-check-inline">
-                        <!-- <label for="testService" class="form-label">Sub Services</label><br> -->
-                        <!-- (change)="onCheckboxChange($event)"  -->
-                        <div class="check" *ngFor="let sub of subServiceList">
-                          <input class="form-check-input"type="checkbox" formControlName="subService"
-                           id="flexCheckChecked" [value]="sub.subService_id" (change)="onCheckChange($event)">
+                        <div class="check" *ngFor="let sub of subServiceList; let i = index">
+                          <input class="form-check-input"type="checkbox"
+                           id="flexCheckChecked"  (change)="onChange($event.target, sub.subService_name)">
                           <label class="form-check-label" for="flexCheckChecked">
                             {{sub.subService_name}}
-                            <!-- [checked]="{{sub.select}}"  -->
                           </label>
                         </div>
                       </div>

@@ -78,7 +78,7 @@ export class AppointmentComponent implements OnInit {
   }
 
   //on the click of department change event click and through department id doctors will show in dependent dropdown
-  changeDept(event: any) {
+  changeDept(event) {
     let deptId = event.target.value;
     this.userService
       .showDoc(+deptId)

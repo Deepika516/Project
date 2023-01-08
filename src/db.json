@@ -72,6 +72,13 @@
       "email": "akdoe@gmail.com",
       "password": "akdoe123",
       "id": 8
+    },
+    {
+      "first_name": "akshat",
+      "last_name": "mahindroo",
+      "email": "ak@gmail.com",
+      "password": "ak123456",
+      "id": 9
     }
   ],
   "appointment": [
@@ -294,6 +301,16 @@
       "doc": "Dr.Maria",
       "doa": "2022-12-01T15:22",
       "id": 22
+    },
+    {
+      "name": "akshit",
+      "gender": "MALE",
+      "email": "ak@gmail.com",
+      "dob": "2022-11-28",
+      "dept": "Cardiology",
+      "doc": "Ms.Jenny",
+      "doa": "2022-12-03T00:12",
+      "id": 23
     }
   ],
   "department": [
@@ -386,101 +403,53 @@
   ],
   "tests": [
     {
-      "d_id": "",
-      "d_name": "",
-      "d_email": "",
-      "d_test": "",
-      "d_testService": "",
-      "d_date": "",
-      "id": 1
-    },
-    {
       "name": "",
       "email": "",
-      "test": "",
-      "testService": "",
-      "date": "",
-      "id": 2
-    },
-    {
-      "name": "John",
-      "email": "angrybird24@mail.com",
-      "testName": "5001",
-      "testService": "",
-      "date": "2022-12-09T16:29",
-      "id": 3
-    },
-    {
-      "name": "John",
-      "email": "tiny.aggerwal@gmail.com",
-      "testName": "",
-      "testService": "115",
-      "subservice": "115",
-      "date": "2022-12-22T18:58",
-      "id": 4
-    },
-    {
-      "name": "John",
-      "email": "tiny.aggerwal@gmail.com",
-      "testName": "",
-      "testService": "115",
-      "subservice": "115",
-      "date": "2022-12-01T16:00",
-      "id": 5
-    },
-    {
-      "name": "kittu sharma",
-      "email": "angrybird24@mail.com",
-      "testName": "",
-      "testService": "115",
-      "subservice": "115",
-      "date": "2022-12-16T17:19",
-      "id": 6
-    },
-    {
-      "name": "John",
-      "email": "deepika.mahindroo@sourcefuse.com",
-      "testName": "",
-      "testService": "X-RAY",
-      "subservice": "",
-      "date": "2022-12-22T15:38",
-      "id": 7
-    },
-    {
-      "name": "Tiny aggerwal",
-      "email": "angrybird24@mail.com",
-      "testName": "",
-      "testService": "X-RAY",
-      "subservice": "",
-      "date": "2022-12-16T16:09",
-      "id": 8
-    },
-    {
-      "name": "kittu sharma",
-      "email": "angrybird24@mail.com",
-      "testName": "",
-      "testService": "X-RAY",
-      "subservice": "",
-      "date": "2022-12-02T17:22",
-      "id": 9
-    },
-    {
-      "name": "John",
-      "email": "tiny.aggerwal@gmail.com",
-      "testName": "",
-      "testService": "X-RAY",
-      "subservice": "",
-      "date": "2022-12-31T18:16",
-      "id": 10
-    },
-    {
-      "name": "Aashie",
-      "email": "ashish1592@gmail.com",
       "testName": "Radiology Services",
       "testService": "X-RAY",
-      "subservice": "",
-      "date": "2022-12-30T12:44",
-      "id": 11
+      "subservice": [
+        "X-RAY spine",
+        "X-RAY neck"
+      ],
+      "date": "2022-12-10T18:08",
+      "id": 17
+    },
+    {
+      "name": "kittu sharma",
+      "email": "deepika.mahindroo@sourcefuse.com",
+      "testName": "Radiology Services",
+      "testService": "X-RAY",
+      "subservice": [
+        "X-RAY spine",
+        "X-RAY neck"
+      ],
+      "date": "2022-12-10T18:08",
+      "id": 18
+    },
+    {
+      "name": "John",
+      "email": "tiny.aggerwal@gmail.com",
+      "testName": "Radiology Services",
+      "testService": "X-RAY",
+      "subservice": [
+        "X-RAY chest",
+        "X-RAY spine"
+      ],
+      "date": "2022-12-03T20:57",
+      "id": 19
+    },
+    {
+      "name": "akshat",
+      "email": "ak@gmail.com",
+      "testName": "Radiology Services",
+      "testService": "CT-SCAN",
+      "subservice": [
+        "CT-SCAN whole body",
+        "CT-SCAN spine",
+        "CT-SCAN nesk"
+      ],
+      "date": "2022-12-31T21:17",
+      "id": 20
     }
   ]
 }
